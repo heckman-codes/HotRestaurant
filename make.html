@@ -17,7 +17,23 @@
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
+    <script>
+        $("#add-btn").on("click", function (event) {
+            event.preventDefault();
+            var newReservation = {
+                name: $("#name").val().trim(),
+                phone: $("#phone").val().trim(),
+                email: $("#email").val().trim(),
+                id: $("#id").val().trim(),
+                time: $("#time").val().trim()
+            };
 
+            $.post("/make/characters", newReservation)
+                .then(function (data) {
+                    console.log("make.html", data);
+                });
+        });
+    </script>
 </body>
 
 </html>
