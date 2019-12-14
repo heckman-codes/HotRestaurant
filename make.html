@@ -11,11 +11,16 @@
 
 <body>
     <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <h1 class="display-4">
+            <span class="fa fa-fire">
+            </span>
+            "Mugatu's Restaurant"
+        </h1>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <p>Book your table now!</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">
+            <span class="fa fa-list-alt"></span>
+            View Table</a>
     </div>
     <script>
         $("#add-btn").on("click", function (event) {
@@ -28,12 +33,36 @@
                 time: $("#time").val().trim()
             };
 
+<<<<<<< HEAD
             $.post("/make/characters", newReservation)
                 .then(function (data) {
                     console.log("make.html", data);
                 });
         });
     </script>
+=======
+    <div class="card-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="reserve-name">Name</label>
+            <input type="text" class="form-control" id="reserve-name">
+          </div>
+          <div class="form-group">
+            <label for="reserve-phone">Phone Number</label>
+            <input type="text" class="form-control" id="reserve-phone">
+          </div>
+          <div class="form-group">
+            <label for="reserve-email">Email</label>
+            <input type="text" class="form-control" id="reserve-email">
+          </div>
+          <div class="form-group">
+            <label for="reserve-unique-id">Unique ID</label>
+            <input type="text" class="form-control" id="reserve-unique-id">
+          </div>
+          <button type="submit" class="btn btn-primary submit">Submit</button>
+        </form>
+      </div>
+>>>>>>> 7043fd9d6db433e7385d43109791df15d27b9c09
 </body>
 
 </html>
