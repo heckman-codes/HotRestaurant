@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Mugatu's Resturant</title>
 </head>
@@ -26,51 +25,25 @@
 
     <div class="card-body">
         <form role="form">
-            <div class="form-group">
-                <label for="reserve-name">Name</label>
-                <input type="text" class="form-control" id="name">
-            </div>
-            <div class="form-group">
-                <label for="reserve-phone">Phone Number</label>
-                <input type="text" class="form-control" id="phone">
-            </div>
-            <div class="form-group">
-                <label for="reserve-email">Email</label>
-                <input type="text" class="form-control" id="email">
-            </div>
-            <div class="form-group">
-                <label for="reserve-unique-id">Time</label>
-                <input type="text" class="form-control" id="time">
-            </div>
-            <div class="form-group">
-                <label for="reserve-unique-id">Unique ID</label>
-                <input type="text" class="form-control" id="id">
-            </div>
-            <button type="submit" class="btn btn-primary submit" id="add-btn">Submit</button>
+          <div class="form-group">
+            <label for="reserve-name">Name</label>
+            <input type="text" class="form-control" id="reserve-name">
+          </div>
+          <div class="form-group">
+            <label for="reserve-phone">Phone Number</label>
+            <input type="text" class="form-control" id="reserve-phone">
+          </div>
+          <div class="form-group">
+            <label for="reserve-email">Email</label>
+            <input type="text" class="form-control" id="reserve-email">
+          </div>
+          <div class="form-group">
+            <label for="reserve-unique-id">Unique ID</label>
+            <input type="text" class="form-control" id="reserve-unique-id">
+          </div>
+          <button type="submit" class="btn btn-primary submit">Submit</button>
         </form>
-    </div>
-
-    <script type="text/javascript">
-        $("#add-btn").on("click", function (event) {
-            event.preventDefault();
-            var newReservation = {
-                name: $("#name").val().trim(),
-                phone: $("#phone").val().trim(),
-                email: $("#email").val().trim(),
-                id: $("#id").val().trim(),
-                time: $("#time").val().trim()
-            };
-
-            $.ajax({
-                url: "/tables",
-                method: "POST",
-                data: newReservation
-            })
-                .then(function (data) {
-                    console.log("make.html", data);
-                });
-        });
-    </script>
+      </div>
 </body>
 
 </html>
