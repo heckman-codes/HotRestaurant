@@ -16,10 +16,6 @@ var tables = [
 
 var waitlist = [];
 
-//pseudocoding this bit
-// if (tables.length > 5) {
-//     waitlist.push(reservation);
-// }
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -48,3 +44,18 @@ app.get("/view", function (req, res) {
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
+
+app.post("/tables", function (req, res) {
+    var newReservation = req.body;
+    console.log(req.body);
+
+    if (tables.length >= 5) {
+        waitlist.push(reservation);
+    } else {
+        tables.push(newReservation);
+    }
+
+    res.json(newReservation);
+
+
+})
