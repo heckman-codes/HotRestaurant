@@ -24,6 +24,10 @@ app.get("/home", function (req, res) {
     res.sendFile(path.join(__dirname + "/index.html"))
 });
 
+app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname + "/index.html"))
+});
+
 app.get("/tables", function (req, res) {
     res.sendFile(path.join(__dirname + "/make.html"))
 })
@@ -32,13 +36,6 @@ app.get("/view", function (req, res) {
     res.sendFile(path.join(__dirname + "/view.html"))
     return res.json(tables);
     return res.json(waitlist);
-    // for (let i = 0; i < tables.length; i++) {
-    //     return res.json(tables[i])
-    // }
-
-    // for (let j = 0; j < waitlist.length; j++) {
-    //     return res.json()
-    // }
 })
 
 app.listen(PORT, function () {

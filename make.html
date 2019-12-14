@@ -11,43 +11,48 @@
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">
-            <span class="fa fa-fire">
-            </span>
-            "Mugatu's Restaurant"
-        </h1>
-        <hr class="my-4">
-        <p>Book your table now!</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">
-            <span class="fa fa-list-alt"></span>
-            View Table</a>
-    </div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">
+                <span class="fa fa-fire">
+                </span>
+                "Mugatu's Restaurant"
+            </h1>
+            <hr class="my-4">
+            <p>Book your table now!</p>
+            <a class="btn btn-primary btn-lg" href="/view" role="button">
+                <span class="fa fa-list-alt"></span>
+                View Tables</a>
+            <a class="btn btn-primary btn-lg" href="/home" role="button">
+                <span class="fa fa-list-alt"></span>
+                Home</a>
+        </div>
 
-    <div class="card-body">
-        <form role="form">
-            <div class="form-group">
-                <label for="reserve-name">Name</label>
-                <input type="text" class="form-control" id="name">
-            </div>
-            <div class="form-group">
-                <label for="reserve-phone">Phone Number</label>
-                <input type="text" class="form-control" id="phone">
-            </div>
-            <div class="form-group">
-                <label for="reserve-email">Email</label>
-                <input type="text" class="form-control" id="email">
-            </div>
-            <div class="form-group">
-                <label for="reserve-unique-id">Time</label>
-                <input type="text" class="form-control" id="time">
-            </div>
-            <div class="form-group">
-                <label for="reserve-unique-id">Unique ID</label>
-                <input type="text" class="form-control" id="id">
-            </div>
-            <button type="submit" class="btn btn-primary submit" id="add-btn">Submit</button>
-        </form>
+        <div class="card-body">
+            <form role="form">
+                <div class="form-group">
+                    <label for="reserve-name">Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="reserve-phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="reserve-email">Email</label>
+                    <input type="text" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="reserve-unique-id">Time</label>
+                    <input type="text" class="form-control" id="time">
+                </div>
+                <div class="form-group">
+                    <label for="reserve-unique-id">Unique ID</label>
+                    <input type="text" class="form-control" id="id">
+                </div>
+                <button type="submit" class="btn btn-primary submit" id="add-btn">Submit</button>
+            </form>
+        </div>
     </div>
 
     <script type="text/javascript">
